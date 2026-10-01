@@ -105,7 +105,7 @@ calling convention.
    (`roc_auc >= 0.65` for every model, and the point-in-time check must pass)
    before uploading `run_summary.json` as a build artifact.
 
-**CI run:** <CI_RUN_LINK> — status: <CI_RUN_STATUS>
+**CI run:** https://github.com/kalyanipande8/payer-risk-scoring/actions/runs/36921635566 — status: ✅ success (all 3 jobs passed, 1m25s)
 
 ## Time-to-production: manual (3 weeks) vs. this repo's automated path (~5 days)
 
