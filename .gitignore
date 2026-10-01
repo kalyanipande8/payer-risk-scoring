@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+.venv/
+venv/
+data/feature_store_local/
+mlruns/
+run_summary.json
+.DS_Store
