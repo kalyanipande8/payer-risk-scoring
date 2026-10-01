@@ -35,7 +35,7 @@ from typing import Any
 
 
 class Run:
-    def __init__(self, tracker: "ExperimentTracker", run_id: str, experiment: str, run_name: str):
+    def __init__(self, tracker: ExperimentTracker, run_id: str, experiment: str, run_name: str):
         self.tracker = tracker
         self.run_id = run_id
         self.experiment = experiment
@@ -59,7 +59,7 @@ class Run:
         for k, v in metrics.items():
             self.log_metric(k, v)
 
-    def __enter__(self) -> "Run":
+    def __enter__(self) -> Run:
         return self
 
     def __exit__(self, exc_type, exc, tb) -> None:

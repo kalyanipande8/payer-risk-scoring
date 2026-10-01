@@ -293,9 +293,8 @@ class FeatureStore:
             as_of = event[as_of_key]
             best = None
             for ev_time, by_entity in loaded:
-                if ev_time <= as_of and eid in by_entity:
-                    if best is None or ev_time > best[0]:
-                        best = (ev_time, by_entity[eid])
+                if ev_time <= as_of and eid in by_entity and (best is None or ev_time > best[0]):
+                    best = (ev_time, by_entity[eid])
             joined = dict(event)
             if best is not None:
                 for k, v in best[1].items():

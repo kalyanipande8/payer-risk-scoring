@@ -117,7 +117,6 @@ def build_feature_store(
 
     # v1: partial-year snapshot -- utilization/cost columns scaled down to
     # represent claims run-out incompleteness, everything else unchanged.
-    rng = np.random.default_rng(1)
     partial_scale = 0.75
     v1_df = raw_df.copy()
     utilization_cost_cols = [
@@ -137,7 +136,7 @@ def build_feature_store(
             row = dict(zip(cols, r))
             for c in cols:
                 if schema[c] == "int":
-                    row[c] = int(round(row[c]))
+                    row[c] = round(row[c])
                 else:
                     row[c] = float(row[c])
             out.append(row)

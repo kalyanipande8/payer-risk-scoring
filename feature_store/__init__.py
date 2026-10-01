@@ -1,3 +1,3 @@
-from .store import FeatureStore, FeatureMetadata
+from .store import FeatureMetadata, FeatureStore
 
-__all__ = ["FeatureStore", "FeatureMetadata"]
+__all__ = ["FeatureMetadata", "FeatureStore"]
