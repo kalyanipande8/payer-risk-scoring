@@ -31,7 +31,7 @@ import sqlite3
 import time
 import uuid
 from pathlib import Path
-from typing import Any
+from typing import Any, Self
 
 
 class Run:
@@ -59,7 +59,7 @@ class Run:
         for k, v in metrics.items():
             self.log_metric(k, v)
 
-    def __enter__(self) -> Run:
+    def __enter__(self) -> Self:
         return self
 
     def __exit__(self, exc_type, exc, tb) -> None:
